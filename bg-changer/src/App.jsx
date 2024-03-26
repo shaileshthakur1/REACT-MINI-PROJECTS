@@ -87,12 +87,10 @@ function App(){
     style={{backgroundColor: "lavender"}}
     >LAVENDER
     </button>
-    
-    </div>
-    </div>
-    </div>
 
-   
+    </div>
+    </div>
+    </div>
   )
 }
 
