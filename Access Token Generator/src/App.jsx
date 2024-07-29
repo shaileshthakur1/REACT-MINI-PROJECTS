@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useCallback } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react' ;
+import backgroundImage from './assets/background.jpeg';
+
 
 function App() {
 
@@ -40,7 +42,8 @@ function App() {
   }, [length, numberElligible, charElligible, tokenGenerator])
   return (
     
-    <div className="w-full max-w-lg mx-auto shadow-md rounded-lg px-4 py-3 my-20 bg-black text-gray-500">
+    <div className="min-h-screen bg-cover bg-center w-50 max-w-lg mx-auto shadow-md rounded-lg px-4 py-3 my-20 bg-black text-gray-500"
+    style={{ backgroundImage: `url(${backgroundImage})` }}>
       <h1 className='text-white text-center my-3'>ACCESS TOKEN GENERATOR 🔑</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
@@ -59,7 +62,7 @@ function App() {
         
     </div>
     <div className='flex text-sm gap-x-2'>
-      <div className='flex items-center gap-x-1'>
+      <div className='flex items-center gap-x-1'className="font-bold text-white">
         <input 
         type="range"
         min={6}
@@ -79,7 +82,7 @@ function App() {
               setNumberElligible((prev) => !prev);
           }}
       />
-      <label htmlFor="numberInput">Numbers</label>
+      <label htmlFor="numberInput" className="font-bold text-white">Numbers</label>
       </div>
       <div className="flex items-center gap-x-1">
           <input
@@ -90,7 +93,7 @@ function App() {
                   setCharElligible((prev) => !prev )
               }}
           />
-          <label htmlFor="characterInput">Characters</label>
+          <label htmlFor="characterInput" className="font-bold text-white">Characters</label>
       </div>
     </div>
 </div>
